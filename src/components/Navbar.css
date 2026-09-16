@@ -1,0 +1,155 @@
+
+.kentank-navbar {
+  background-color: #071a2b;
+  padding-top: 0.9rem;
+  padding-bottom: 0.9rem;
+}
+
+
+/* =========================================================
+   NAVBAR CONTAINER
+   ========================================================= */
+
+.kentank-navbar .container {
+  display: flex;
+  align-items: center;
+}
+
+
+/* =========================================================
+   BRAND / LOGO
+   ========================================================= */
+
+.kentank-navbar-brand {
+  display: flex;
+  align-items: center;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+}
+
+.kentank-logo {
+  display: block;
+
+  width: 48px;
+  height: 48px;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.kentank-navbar-brand:hover .kentank-logo {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
+
+/* =========================================================
+   NAVIGATION AREA
+   ========================================================= */
+
+.kentank-navbar .navbar-collapse {
+  margin-left: auto;
+}
+
+.kentank-navbar .navbar-nav {
+  margin-left: auto !important;
+}
+
+
+/* =========================================================
+   NAVIGATION LINKS
+   ========================================================= */
+
+.kentank-navbar .nav-link {
+  color: #e2e8f0 !important;
+
+  font-weight: 500;
+
+  margin-left: 0.75rem;
+
+  transition: color 0.2s ease;
+}
+
+.kentank-navbar .nav-link:hover {
+  color: #22c55e !important;
+}
+
+.kentank-navbar .nav-link.active {
+  color: #22c55e !important;
+}
+
+
+/* =========================================================
+   HAMBURGER
+   ========================================================= */
+
+.kentank-navbar .navbar-toggler {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+
+  margin-left: auto;
+
+  padding: 0.4rem 0.55rem;
+}
+
+.kentank-navbar .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.kentank-navbar .navbar-toggler:focus {
+  box-shadow: 0 0 0 0.2rem rgba(34, 197, 94, 0.25);
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 991.98px) {
+
+  .kentank-navbar .navbar-collapse {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .kentank-navbar .navbar-nav {
+    width: 100%;
+
+    margin-left: 0 !important;
+
+    padding-top: 1rem;
+  }
+
+  .kentank-navbar .nav-link {
+    margin-left: 0;
+    padding: 0.65rem 0;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 575.98px) {
+
+  .kentank-navbar {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+
+  .kentank-logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .kentank-navbar .navbar-toggler {
+    padding: 0.35rem 0.5rem;
+  }
+
+}

@@ -1,0 +1,467 @@
+/* =========================================================
+   KENTANK ADMIN LOGIN
+   ========================================================= */
+
+.kentank-admin-login-page {
+  min-height: 100vh;
+
+  background-color: #071a2b;
+
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   BACKGROUND
+   ========================================================= */
+
+.kentank-admin-login-background {
+  min-height: 100vh;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 2rem 1rem;
+
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(34, 197, 94, 0.16),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at bottom left,
+      rgba(14, 116, 144, 0.18),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      #071a2b 0%,
+      #0b2a43 60%,
+      #0f5132 100%
+    );
+}
+
+
+/* =========================================================
+   LOGIN CARD
+   ========================================================= */
+
+.kentank-admin-login-card {
+  width: 100%;
+
+  max-width: 470px;
+
+  padding: 2.5rem;
+
+  background-color: #ffffff;
+
+  border-radius: 1rem;
+
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.28);
+
+  color: #071a2b;
+}
+
+
+/* =========================================================
+   BRAND
+   ========================================================= */
+
+.kentank-admin-login-brand {
+  display: flex;
+
+  align-items: center;
+
+  gap: 0.85rem;
+
+  margin-bottom: 2rem;
+}
+
+.kentank-admin-login-logo {
+  width: 48px;
+  height: 48px;
+
+  flex: 0 0 48px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 0.75rem;
+
+  background:
+    linear-gradient(
+      135deg,
+      #22c55e,
+      #15803d
+    );
+
+  color: #ffffff;
+
+  font-size: 1.45rem;
+  font-weight: 800;
+
+  box-shadow:
+    0 8px 18px rgba(34, 197, 94, 0.2);
+}
+
+.kentank-admin-login-brand h1 {
+  color: #071a2b;
+
+  font-size: 1.1rem;
+  font-weight: 800;
+
+  margin: 0 0 0.15rem;
+}
+
+.kentank-admin-login-brand span {
+  color: #64748b;
+
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.kentank-admin-login-header {
+  margin-bottom: 1.5rem;
+}
+
+.kentank-admin-login-header h2 {
+  color: #071a2b;
+
+  font-size: 1.7rem;
+  font-weight: 800;
+
+  margin-bottom: 0.45rem;
+}
+
+.kentank-admin-login-header p {
+  color: #64748b;
+
+  font-size: 0.85rem;
+
+  line-height: 1.6;
+
+  margin: 0;
+}
+
+
+/* =========================================================
+   ERROR
+   ========================================================= */
+
+.kentank-admin-login-error {
+  display: flex;
+
+  align-items: center;
+
+  gap: 0.65rem;
+
+  margin-bottom: 1.25rem;
+
+  padding: 0.8rem 0.9rem;
+
+  background-color: #fef2f2;
+
+  border: 1px solid #fecaca;
+
+  border-radius: 0.55rem;
+
+  color: #b91c1c;
+
+  font-size: 0.78rem;
+
+  line-height: 1.45;
+}
+
+.kentank-admin-login-error-icon {
+  width: 22px;
+  height: 22px;
+
+  flex: 0 0 22px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background-color: #fee2e2;
+
+  color: #dc2626;
+
+  font-size: 0.7rem;
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.kentank-admin-login-form {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 1.15rem;
+}
+
+.kentank-admin-login-field {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 0.45rem;
+}
+
+.kentank-admin-login-field label {
+  color: #1e293b;
+
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   INPUTS
+   ========================================================= */
+
+.kentank-admin-login-field input {
+  width: 100%;
+
+  min-height: 46px;
+
+  padding: 0.7rem 0.85rem;
+
+  background-color: #ffffff;
+
+  border: 1px solid #cbd5e1;
+
+  border-radius: 0.5rem;
+
+  color: #071a2b;
+
+  font-size: 0.85rem;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.kentank-admin-login-field input::placeholder {
+  color: #94a3b8;
+}
+
+.kentank-admin-login-field input:focus {
+  border-color: #22c55e;
+
+  box-shadow:
+    0 0 0 3px rgba(34, 197, 94, 0.12);
+}
+
+.kentank-admin-login-field input:disabled {
+  background-color: #f1f5f9;
+
+  cursor: not-allowed;
+}
+
+
+/* =========================================================
+   PASSWORD
+   ========================================================= */
+
+.kentank-admin-password-wrapper {
+  position: relative;
+}
+
+.kentank-admin-password-wrapper input {
+  padding-right: 4.5rem;
+}
+
+.kentank-admin-password-toggle {
+  position: absolute;
+
+  top: 50%;
+  right: 0.65rem;
+
+  transform: translateY(-50%);
+
+  border: none;
+
+  background: transparent;
+
+  color: #15803d;
+
+  font-size: 0.72rem;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  padding: 0.35rem;
+}
+
+.kentank-admin-password-toggle:hover {
+  color: #166534;
+}
+
+.kentank-admin-password-toggle:disabled {
+  color: #94a3b8;
+
+  cursor: not-allowed;
+}
+
+
+/* =========================================================
+   LOGIN BUTTON
+   ========================================================= */
+
+.kentank-admin-login-button {
+  width: 100%;
+
+  min-height: 47px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 0.55rem;
+
+  margin-top: 0.25rem;
+
+  padding: 0.75rem 1rem;
+
+  border: none;
+
+  border-radius: 0.5rem;
+
+  background:
+    linear-gradient(
+      135deg,
+      #22c55e,
+      #15803d
+    );
+
+  color: #ffffff;
+
+  font-size: 0.85rem;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 8px 18px rgba(34, 197, 94, 0.2);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.kentank-admin-login-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 24px rgba(34, 197, 94, 0.25);
+}
+
+.kentank-admin-login-button:disabled {
+  opacity: 0.7;
+
+  cursor: not-allowed;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.kentank-admin-login-footer {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 1rem;
+
+  margin-top: 1.75rem;
+  padding-top: 1.25rem;
+
+  border-top: 1px solid #e2e8f0;
+
+  color: #94a3b8;
+
+  font-size: 0.65rem;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 575.98px) {
+
+  .kentank-admin-login-background {
+    padding: 1rem;
+  }
+
+  .kentank-admin-login-card {
+    padding: 1.75rem 1.25rem;
+
+    border-radius: 0.85rem;
+  }
+
+  .kentank-admin-login-brand {
+    margin-bottom: 1.5rem;
+  }
+
+  .kentank-admin-login-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .kentank-admin-login-footer {
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 390px) {
+
+  .kentank-admin-login-card {
+    padding: 1.5rem 1rem;
+  }
+
+  .kentank-admin-login-logo {
+    width: 44px;
+    height: 44px;
+
+    flex-basis: 44px;
+  }
+
+  .kentank-admin-login-brand h1 {
+    font-size: 1rem;
+  }
+
+}

@@ -1,0 +1,860 @@
+.kentank-about-page {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f8fafc;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.kentank-about-hero {
+  background:
+    linear-gradient(
+      135deg,
+      #071a2b 0%,
+      #0b2a43 55%,
+      #0f5132 100%
+    );
+
+  color: #ffffff;
+
+  padding: 5rem 0;
+}
+
+.kentank-about-hero-content {
+  max-width: 850px;
+}
+
+.kentank-about-label,
+.kentank-about-section-label {
+  display: inline-block;
+
+  color: #16a34a;
+
+  font-size: 0.75rem;
+  font-weight: 800;
+
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  margin-bottom: 0.75rem;
+}
+
+.kentank-about-hero .kentank-about-label {
+  color: #4ade80;
+}
+
+.kentank-about-hero h1 {
+  max-width: 850px;
+
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-weight: 800;
+  color: #dbeafe;
+
+  line-height: 1.1;
+
+  margin-bottom: 1.25rem;
+}
+
+.kentank-about-hero p {
+  max-width: 750px;
+
+  color: #dbeafe;
+
+  font-size: 1.05rem;
+  line-height: 1.8;
+
+  margin-bottom: 1.75rem;
+}
+
+
+/* =========================================================
+   HERO BUTTONS
+   ========================================================= */
+
+.kentank-about-hero-actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 0.85rem;
+
+  flex-wrap: wrap;
+}
+
+.kentank-about-primary-btn,
+.kentank-about-secondary-btn {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 45px;
+
+  padding: 0.75rem 1.3rem;
+
+  border-radius: 0.5rem;
+
+  font-size: 0.85rem;
+  font-weight: 800;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.kentank-about-primary-btn {
+  background-color: #22c55e;
+
+  color: #052e16;
+}
+
+.kentank-about-primary-btn:hover {
+  background-color: #4ade80;
+
+  color: #052e16;
+
+  transform: translateY(-2px);
+}
+
+.kentank-about-secondary-btn {
+  background-color: transparent;
+
+  color: #ffffff;
+
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.kentank-about-secondary-btn:hover {
+  background-color: #ffffff;
+
+  color: #071a2b;
+
+  border-color: #ffffff;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   INTRODUCTION
+   ========================================================= */
+
+.kentank-about-introduction {
+  padding: 5rem 0;
+}
+
+.kentank-about-introduction .kentank-about-section-label,
+.kentank-about-heading .kentank-about-section-label,
+.kentank-about-mission .kentank-about-section-label {
+  color: #16a34a;
+}
+
+.kentank-about-introduction h2,
+.kentank-about-mission h2,
+.kentank-about-customers h2,
+.kentank-about-heading h2 {
+  color: #071a2b;
+
+  font-size: clamp(1.8rem, 4vw, 2.7rem);
+
+  font-weight: 800;
+
+  line-height: 1.2;
+
+  margin-bottom: 1rem;
+}
+
+.kentank-about-introduction > .container > .row > .col-lg-6:first-child p {
+  color: #64748b;
+
+  font-size: 0.95rem;
+
+  line-height: 1.8;
+
+  margin-bottom: 1rem;
+}
+
+
+/* =========================================================
+   COMMITMENT CARD
+   ========================================================= */
+
+.kentank-about-introduction-card {
+  height: 100%;
+
+  padding: 2.25rem;
+
+  background:
+    linear-gradient(
+      145deg,
+      #071a2b,
+      #0b2a43
+    );
+
+  color: #ffffff;
+
+  border-radius: 1rem;
+
+  box-shadow:
+    0 18px 45px rgba(7, 26, 43, 0.14);
+}
+
+.kentank-about-water-icon {
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 1.25rem;
+
+  border-radius: 50%;
+
+  background-color: rgba(34, 197, 94, 0.15);
+
+  font-size: 1.5rem;
+}
+
+.kentank-about-introduction-card > span {
+  color: #4ade80;
+
+  font-size: 0.75rem;
+  font-weight: 800;
+
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.kentank-about-introduction-card h3 {
+  font-size: 1.55rem;
+
+  font-weight: 800;
+
+  margin: 0.5rem 0 0.85rem;
+}
+
+.kentank-about-introduction-card > p {
+  color: #cbd5e1;
+
+  font-size: 0.9rem;
+
+  line-height: 1.7;
+
+  margin-bottom: 1.5rem;
+}
+
+
+/* =========================================================
+   COMMITMENT LIST
+   ========================================================= */
+
+.kentank-about-commitment-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 0.85rem;
+}
+
+.kentank-about-commitment-list > div {
+  display: flex;
+
+  align-items: center;
+
+  gap: 0.7rem;
+}
+
+.kentank-about-commitment-list span {
+  flex: 0 0 auto;
+
+  width: 23px;
+  height: 23px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background-color: rgba(34, 197, 94, 0.18);
+
+  color: #4ade80;
+
+  font-size: 0.7rem;
+  font-weight: 800;
+}
+
+.kentank-about-commitment-list p {
+  color: #e2e8f0;
+
+  font-size: 0.82rem;
+
+  margin: 0;
+}
+
+
+/* =========================================================
+   MISSION
+   ========================================================= */
+
+.kentank-about-mission {
+  padding: 5rem 0;
+
+  background-color: #eefbf3;
+}
+
+.kentank-about-mission-content {
+  max-width: 850px;
+
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+.kentank-about-mission-content p {
+  color: #64748b;
+
+  font-size: 1rem;
+
+  line-height: 1.85;
+
+  margin: 0;
+}
+
+
+/* =========================================================
+   WHY CHOOSE US
+   ========================================================= */
+
+.kentank-about-why {
+  padding: 5rem 0;
+
+  background-color: #ffffff;
+}
+
+.kentank-about-heading {
+  max-width: 750px;
+
+  margin: 0 auto 2.5rem;
+
+  text-align: center;
+}
+
+.kentank-about-heading p {
+  color: #64748b;
+
+  font-size: 0.95rem;
+
+  line-height: 1.7;
+
+  margin: 0;
+}
+
+
+/* =========================================================
+   FEATURES
+   ========================================================= */
+
+.kentank-about-feature {
+  height: 100%;
+
+  padding: 1.75rem 1.35rem;
+
+  background-color: #f8fafc;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 0.85rem;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.kentank-about-feature:hover {
+  transform: translateY(-5px);
+
+  border-color: #86efac;
+
+  box-shadow:
+    0 14px 30px rgba(15, 23, 42, 0.08);
+}
+
+.kentank-about-feature-icon {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 1rem;
+
+  border-radius: 0.75rem;
+
+  background-color: rgba(34, 197, 94, 0.12);
+
+  color: #15803d;
+
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+.kentank-about-feature h3 {
+  color: #071a2b;
+
+  font-size: 1.05rem;
+  font-weight: 800;
+
+  margin-bottom: 0.6rem;
+}
+
+.kentank-about-feature p {
+  color: #64748b;
+
+  font-size: 0.82rem;
+
+  line-height: 1.7;
+
+  margin: 0;
+}
+
+
+/* =========================================================
+   WHO WE SERVE
+   ========================================================= */
+
+.kentank-about-customers {
+  padding: 5rem 0;
+
+  background-color: #f8fafc;
+}
+
+.kentank-about-customers .kentank-about-section-label {
+  color: #16a34a;
+}
+
+.kentank-about-customers > .container > .row > .col-lg-5 p {
+  color: #64748b;
+
+  font-size: 0.95rem;
+
+  line-height: 1.8;
+
+  margin: 0;
+}
+
+
+/* =========================================================
+   CUSTOMER GRID
+   ========================================================= */
+
+.kentank-about-customer-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 1rem;
+}
+
+.kentank-about-customer-item {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 0.85rem;
+
+  padding: 1.25rem;
+
+  background-color: #ffffff;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 0.75rem;
+}
+
+.kentank-about-customer-item > span {
+  flex: 0 0 auto;
+
+  font-size: 1.35rem;
+}
+
+.kentank-about-customer-item h3 {
+  color: #071a2b;
+
+  font-size: 0.95rem;
+  font-weight: 800;
+
+  margin-bottom: 0.35rem;
+}
+
+.kentank-about-customer-item p {
+  color: #64748b;
+
+  font-size: 0.76rem;
+
+  line-height: 1.55;
+
+  margin: 0;
+}
+
+
+/* =========================================================
+   VALUES
+   ========================================================= */
+
+.kentank-about-values {
+  padding: 5rem 0;
+
+  background-color: #ffffff;
+}
+
+.kentank-about-value {
+  height: 100%;
+
+  padding: 1.75rem;
+
+  border-left: 3px solid #22c55e;
+
+  background-color: #f8fafc;
+}
+
+.kentank-about-value > span {
+  color: #16a34a;
+
+  font-size: 0.75rem;
+  font-weight: 800;
+
+  letter-spacing: 0.08em;
+}
+
+.kentank-about-value h3 {
+  color: #071a2b;
+
+  font-size: 1.15rem;
+  font-weight: 800;
+
+  margin: 0.65rem 0;
+}
+
+.kentank-about-value p {
+  color: #64748b;
+
+  font-size: 0.83rem;
+
+  line-height: 1.7;
+
+  margin: 0;
+}
+
+
+/* =========================================================
+   FINAL CTA
+   ========================================================= */
+
+.kentank-about-cta {
+  padding: 4rem 0;
+
+  background:
+    linear-gradient(
+      135deg,
+      #071a2b 0%,
+      #0b2a43 60%,
+      #0f5132 100%
+    );
+
+  color: #ffffff;
+}
+
+.kentank-about-cta-content {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 2rem;
+}
+
+.kentank-about-cta-content > div:first-child {
+  max-width: 700px;
+}
+
+.kentank-about-cta-content > div:first-child > span {
+  display: block;
+
+  color: #4ade80;
+
+  font-size: 0.75rem;
+  font-weight: 800;
+
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  margin-bottom: 0.5rem;
+}
+
+.kentank-about-cta-content h2 {
+  font-size: clamp(1.7rem, 4vw, 2.5rem);
+
+  font-weight: 800;
+  color: #dbeafe;
+
+  line-height: 1.2;
+
+  margin-bottom: 0.75rem;
+}
+
+.kentank-about-cta-content p {
+  color: #cbd5e1;
+
+  font-size: 0.9rem;
+
+  line-height: 1.7;
+
+  margin: 0;
+}
+
+
+/* =========================================================
+   CTA BUTTONS
+   ========================================================= */
+
+.kentank-about-cta-actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 0.75rem;
+
+  flex-shrink: 0;
+}
+
+.kentank-about-cta-primary,
+.kentank-about-cta-secondary {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 44px;
+
+  padding: 0.7rem 1.25rem;
+
+  border-radius: 0.5rem;
+
+  font-size: 0.82rem;
+  font-weight: 800;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.kentank-about-cta-primary {
+  background-color: #22c55e;
+
+  color: #052e16;
+}
+
+.kentank-about-cta-primary:hover {
+  background-color: #4ade80;
+
+  color: #052e16;
+
+  transform: translateY(-2px);
+}
+
+.kentank-about-cta-secondary {
+  background-color: transparent;
+
+  color: #ffffff;
+
+  border: 1px solid rgba(255, 255, 255, 0.45);
+}
+
+.kentank-about-cta-secondary:hover {
+  background-color: #ffffff;
+
+  color: #071a2b;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 991.98px) {
+
+  .kentank-about-hero {
+    padding: 4rem 0;
+  }
+
+  .kentank-about-introduction,
+  .kentank-about-mission,
+  .kentank-about-why,
+  .kentank-about-customers,
+  .kentank-about-values {
+    padding: 4rem 0;
+  }
+
+  .kentank-about-cta-content {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767.98px) {
+
+  .kentank-about-hero {
+    padding: 3.25rem 0;
+  }
+
+  .kentank-about-hero h1 {
+    font-size: 2.25rem;
+  }
+
+  .kentank-about-hero p {
+    font-size: 0.9rem;
+  }
+
+  .kentank-about-introduction,
+  .kentank-about-mission,
+  .kentank-about-why,
+  .kentank-about-customers,
+  .kentank-about-values {
+    padding: 3.5rem 0;
+  }
+
+  .kentank-about-introduction-card {
+    padding: 1.75rem;
+  }
+
+  .kentank-about-customer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .kentank-about-cta {
+    padding: 3.25rem 0;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 575.98px) {
+
+  .kentank-about-hero {
+    padding: 2.75rem 0;
+  }
+
+  .kentank-about-hero h1 {
+    font-size: 1.9rem;
+  }
+
+  .kentank-about-hero-actions {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .kentank-about-primary-btn,
+  .kentank-about-secondary-btn {
+    width: 100%;
+  }
+
+  .kentank-about-introduction,
+  .kentank-about-mission,
+  .kentank-about-why,
+  .kentank-about-customers,
+  .kentank-about-values {
+    padding: 3rem 0;
+  }
+
+  .kentank-about-introduction-card {
+    padding: 1.5rem;
+  }
+
+  .kentank-about-heading {
+    margin-bottom: 2rem;
+  }
+
+  .kentank-about-cta-actions {
+    width: 100%;
+
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .kentank-about-cta-primary,
+  .kentank-about-cta-secondary {
+    width: 100%;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 390px) {
+
+  .kentank-about-hero {
+    padding: 2.5rem 0;
+  }
+
+  .kentank-about-hero h1 {
+    font-size: 1.7rem;
+  }
+
+  .kentank-about-hero p {
+    font-size: 0.84rem;
+  }
+
+  .kentank-about-introduction-card {
+    padding: 1.25rem;
+  }
+
+  .kentank-about-feature {
+    padding: 1.4rem 1.15rem;
+  }
+
+  .kentank-about-customer-item {
+    padding: 1rem;
+  }
+
+  .kentank-about-value {
+    padding: 1.4rem;
+  }
+
+}

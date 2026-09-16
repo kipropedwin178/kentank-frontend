@@ -1,0 +1,40 @@
+.kentank-footer {
+  background-color: #071a2b;
+  color: #ffffff;
+  margin-top: 3rem;
+}
+
+.kentank-footer-container {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.kentank-footer-title {
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.kentank-footer-description {
+  color: #cbd5e1;
+  margin-bottom: 0;
+}
+
+.kentank-footer-tagline {
+  margin-bottom: 0.5rem;
+}
+
+.kentank-footer-copyright {
+  color: #94a3b8;
+}
+
+/* Mobile */
+@media (max-width: 767.98px) {
+  .kentank-footer {
+    text-align: center;
+  }
+
+  .kentank-footer-right {
+    margin-top: 1.5rem;
+    text-align: center;
+  }
+}

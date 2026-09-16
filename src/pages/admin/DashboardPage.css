@@ -1,0 +1,633 @@
+/* =========================================================
+   KENTANK ADMIN DASHBOARD
+   ========================================================= */
+
+.kentank-dashboard-page {
+  min-height: 100vh;
+
+  padding: 2.5rem;
+
+  background-color: #f1f5f9;
+
+  color: #071a2b;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.kentank-dashboard-header {
+  display: flex;
+
+  align-items: flex-start;
+  justify-content: space-between;
+
+  margin-bottom: 2rem;
+}
+
+.kentank-dashboard-eyebrow {
+  display: block;
+
+  margin-bottom: 0.4rem;
+
+  color: #15803d;
+
+  font-size: 0.7rem;
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+}
+
+.kentank-dashboard-header h1 {
+  margin: 0 0 0.45rem;
+
+  color: #071a2b;
+
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.kentank-dashboard-header p {
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 0.9rem;
+}
+
+
+/* =========================================================
+   STATISTICS
+   ========================================================= */
+
+.kentank-dashboard-stats {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 1.25rem;
+
+  margin-bottom: 2rem;
+}
+
+.kentank-dashboard-stat-card {
+  display: flex;
+
+  align-items: center;
+
+  gap: 1rem;
+
+  min-height: 115px;
+
+  padding: 1.25rem;
+
+  background-color: #ffffff;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 0.85rem;
+
+  box-shadow:
+    0 4px 15px rgba(15, 23, 42, 0.04);
+}
+
+.kentank-dashboard-stat-icon {
+  width: 48px;
+  height: 48px;
+
+  flex: 0 0 48px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 0.7rem;
+
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.kentank-dashboard-stat-icon.blue {
+  background-color: #e0f2fe;
+  color: #0369a1;
+}
+
+.kentank-dashboard-stat-icon.green {
+  background-color: #dcfce7;
+  color: #15803d;
+}
+
+.kentank-dashboard-stat-icon.red {
+  background-color: #fee2e2;
+  color: #dc2626;
+}
+
+.kentank-dashboard-stat-icon.purple {
+  background-color: #f3e8ff;
+  color: #7e22ce;
+}
+
+.kentank-dashboard-stat-card span {
+  display: block;
+
+  margin-bottom: 0.3rem;
+
+  color: #64748b;
+
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.kentank-dashboard-stat-card strong {
+  display: block;
+
+  color: #071a2b;
+
+  font-size: 1.55rem;
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   SECTIONS
+   ========================================================= */
+
+.kentank-dashboard-section {
+  margin-bottom: 2rem;
+}
+
+.kentank-dashboard-section-header {
+  margin-bottom: 1rem;
+}
+
+.kentank-dashboard-section-header span {
+  display: block;
+
+  margin-bottom: 0.25rem;
+
+  color: #15803d;
+
+  font-size: 0.65rem;
+  font-weight: 800;
+
+  letter-spacing: 0.1em;
+}
+
+.kentank-dashboard-section-header h2 {
+  margin: 0;
+
+  color: #071a2b;
+
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   AVAILABILITY
+   ========================================================= */
+
+.kentank-dashboard-availability {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 1.25rem;
+}
+
+.kentank-dashboard-availability-card {
+  display: flex;
+
+  align-items: center;
+
+  gap: 1rem;
+
+  padding: 1.25rem;
+
+  background-color: #ffffff;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 0.85rem;
+}
+
+.availability-icon {
+  width: 44px;
+  height: 44px;
+
+  flex: 0 0 44px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  font-weight: 800;
+}
+
+.availability-icon.in-stock {
+  background-color: #dcfce7;
+  color: #15803d;
+}
+
+.availability-icon.limited {
+  background-color: #fef3c7;
+  color: #b45309;
+}
+
+.availability-icon.out-stock {
+  background-color: #fee2e2;
+  color: #dc2626;
+}
+
+.kentank-dashboard-availability-card span {
+  display: block;
+
+  margin-bottom: 0.2rem;
+
+  color: #64748b;
+
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.kentank-dashboard-availability-card strong {
+  color: #071a2b;
+
+  font-size: 1.35rem;
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   CONTACT
+   ========================================================= */
+
+.kentank-dashboard-contact-card {
+  display: flex;
+
+  align-items: center;
+
+  gap: 1rem;
+
+  padding: 1.35rem;
+
+  background-color: #ffffff;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 0.85rem;
+}
+
+.kentank-dashboard-contact-icon {
+  width: 48px;
+  height: 48px;
+
+  flex: 0 0 48px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 0.7rem;
+
+  background-color: #dcfce7;
+
+  color: #15803d;
+
+  font-weight: 800;
+}
+
+.kentank-dashboard-contact-content {
+  flex: 1;
+}
+
+.kentank-dashboard-contact-content h3 {
+  margin: 0 0 0.35rem;
+
+  color: #071a2b;
+
+  font-size: 0.95rem;
+  font-weight: 800;
+}
+
+.kentank-dashboard-contact-content p {
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 0.78rem;
+
+  line-height: 1.5;
+}
+
+.kentank-dashboard-contact-content strong {
+  color: #15803d;
+}
+
+.kentank-dashboard-status {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 0.4rem;
+
+  padding: 0.45rem 0.7rem;
+
+  border-radius: 999px;
+
+  font-size: 0.68rem;
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+.kentank-dashboard-status span {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+}
+
+.kentank-dashboard-status.configured {
+  background-color: #dcfce7;
+  color: #15803d;
+}
+
+.kentank-dashboard-status.configured span {
+  background-color: #22c55e;
+}
+
+.kentank-dashboard-status.not-configured {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+.kentank-dashboard-status.not-configured span {
+  background-color: #ef4444;
+}
+
+
+/* =========================================================
+   SUMMARY
+   ========================================================= */
+
+.kentank-dashboard-summary {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 1.25rem;
+}
+
+.kentank-dashboard-summary > div {
+  padding: 1.35rem;
+
+  background-color: #ffffff;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 0.85rem;
+}
+
+.kentank-dashboard-summary span {
+  display: block;
+
+  margin-bottom: 0.45rem;
+
+  color: #64748b;
+
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.kentank-dashboard-summary strong {
+  display: block;
+
+  margin-bottom: 0.45rem;
+
+  color: #071a2b;
+
+  font-size: 1.7rem;
+  font-weight: 800;
+}
+
+.kentank-dashboard-summary small {
+  display: block;
+
+  color: #94a3b8;
+
+  font-size: 0.7rem;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   LOADING
+   ========================================================= */
+
+.kentank-dashboard-loading {
+  min-height: 100vh;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 1rem;
+
+  background-color: #f1f5f9;
+
+  color: #64748b;
+}
+
+.kentank-dashboard-loading .spinner-border {
+  width: 2rem;
+  height: 2rem;
+
+  color: #15803d;
+}
+
+.kentank-dashboard-loading p {
+  margin: 0;
+
+  font-size: 0.85rem;
+}
+
+
+/* =========================================================
+   ERROR
+   ========================================================= */
+
+.kentank-dashboard-error {
+  min-height: 100vh;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 2rem;
+
+  background-color: #f1f5f9;
+}
+
+.kentank-dashboard-error-card {
+  width: 100%;
+
+  max-width: 420px;
+
+  padding: 2rem;
+
+  text-align: center;
+
+  background-color: #ffffff;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 0.85rem;
+}
+
+.kentank-dashboard-error-icon {
+  width: 50px;
+  height: 50px;
+
+  margin: 0 auto 1rem;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background-color: #fee2e2;
+
+  color: #dc2626;
+
+  font-weight: 800;
+}
+
+.kentank-dashboard-error-card h2 {
+  margin-bottom: 0.5rem;
+
+  color: #071a2b;
+
+  font-size: 1.2rem;
+}
+
+.kentank-dashboard-error-card p {
+  margin-bottom: 1.25rem;
+
+  color: #64748b;
+
+  font-size: 0.8rem;
+}
+
+.kentank-dashboard-error-card button {
+  padding: 0.65rem 1.25rem;
+
+  border: none;
+
+  border-radius: 0.5rem;
+
+  background-color: #15803d;
+
+  color: #ffffff;
+
+  font-size: 0.78rem;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+  .kentank-dashboard-stats {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767.98px) {
+
+  .kentank-dashboard-page {
+    padding: 1.5rem 1rem;
+  }
+
+  .kentank-dashboard-header h1 {
+    font-size: 1.65rem;
+  }
+
+  .kentank-dashboard-stats {
+    grid-template-columns: 1fr;
+
+    gap: 0.85rem;
+  }
+
+  .kentank-dashboard-availability {
+    grid-template-columns: 1fr;
+
+    gap: 0.85rem;
+  }
+
+  .kentank-dashboard-summary {
+    grid-template-columns: 1fr;
+
+    gap: 0.85rem;
+  }
+
+  .kentank-dashboard-contact-card {
+    align-items: flex-start;
+
+    flex-wrap: wrap;
+  }
+
+  .kentank-dashboard-status {
+    margin-left: 64px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+  .kentank-dashboard-page {
+    padding: 1.25rem 0.85rem;
+  }
+
+  .kentank-dashboard-stat-card {
+    padding: 1rem;
+  }
+
+  .kentank-dashboard-section-header h2 {
+    font-size: 1.1rem;
+  }
+
+}

@@ -1,0 +1,941 @@
+/* =========================================================
+KENTANK DELIVERIES - HOME PAGE
+========================================================= */
+
+.kentank-home {
+width: 100%;
+overflow: hidden;
+}
+
+/* =========================================================
+HERO SECTION
+Compact by design so the tank is visible immediately
+========================================================= */
+
+.kentank-hero {
+background:
+linear-gradient(
+135deg,
+#071a2b 0%,
+#0b2a43 55%,
+#0f5132 100%
+);
+color: #ffffff;
+padding: 1.25rem 0 1.5rem;
+}
+
+.kentank-hero-row {
+min-height: 0;
+align-items: center;
+}
+
+.kentank-hero-badge {
+display: inline-block;
+color: #22c55e;
+font-size: 0.72rem;
+font-weight: 700;
+letter-spacing: 0.07em;
+text-transform: uppercase;
+margin-bottom: 0.5rem;
+}
+
+.kentank-hero-title {
+font-size: clamp(1.9rem, 3.5vw, 3rem);
+font-weight: 800;
+color: #cbd5e1;
+line-height: 1.05;
+margin-bottom: 0.7rem;
+}
+
+.kentank-hero-title span {
+display: block;
+color: #22c55e;
+}
+
+.kentank-hero-description {
+max-width: 500px;
+color: #dbeafe;
+font-size: 0.92rem;
+line-height: 1.5;
+margin-bottom: 0.9rem;
+}
+
+/* =========================================================
+CONTACT BUTTON IN HERO
+========================================================= */
+
+.kentank-hero .kentank-btn-outline {
+min-width: 150px;
+min-height: 40px;
+padding: 0.55rem 1rem;
+font-size: 0.88rem;
+}
+
+/* =========================================================
+GENERAL BUTTON
+========================================================= */
+
+.kentank-btn {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+min-height: 44px;
+padding: 0.65rem 1.2rem;
+border-radius: 0.5rem;
+font-size: 0.9rem;
+font-weight: 700;
+text-decoration: none;
+transition:
+transform 0.2s ease,
+box-shadow 0.2s ease,
+background-color 0.2s ease,
+color 0.2s ease;
+}
+
+.kentank-btn:hover {
+transform: translateY(-2px);
+}
+
+/* =========================================================
+HERO OUTLINE BUTTON
+========================================================= */
+
+.kentank-btn-outline {
+background-color: transparent;
+color: #ffffff;
+border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.kentank-btn-outline:hover {
+background-color: #ffffff;
+color: #071a2b;
+}
+
+/* =========================================================
+HERO PRODUCT
+========================================================= */
+
+.kentank-hero-showcase {
+position: relative;
+max-width: 600px;
+margin: 0 auto;
+}
+
+.kentank-hero-product {
+position: relative;
+height: 335px;
+overflow: hidden;
+border-radius: 1rem;
+background-color: #ffffff;
+display: flex;
+align-items: center;
+justify-content: center;
+box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+.kentank-hero-product-image {
+display: block;
+width: 100%;
+height: 100%;
+object-fit: contain;
+background-color: #ffffff;
+}
+
+.kentank-hero-product-overlay {
+position: absolute;
+left: 0;
+right: 0;
+bottom: 0;
+padding: 1rem;
+background:
+linear-gradient(
+to top,
+rgba(3, 15, 28, 0.95),
+rgba(3, 15, 28, 0)
+);
+}
+
+.kentank-hero-product-label {
+color: #22c55e;
+font-size: 0.68rem;
+font-weight: 700;
+text-transform: uppercase;
+letter-spacing: 0.06em;
+}
+
+.kentank-hero-product-overlay h2 {
+margin: 0.25rem 0 0.35rem;
+font-size: 1.25rem;
+font-weight: 800;
+color: #ffffff;
+}
+
+.kentank-hero-product-details {
+display: flex;
+flex-wrap: wrap;
+gap: 0.8rem;
+color: #e2e8f0;
+font-size: 0.82rem;
+margin-bottom: 0.45rem;
+}
+
+/* =========================================================
+HERO AVAILABILITY
+========================================================= */
+
+.kentank-hero-availability {
+display: inline-block;
+padding: 0.3rem 0.6rem;
+border-radius: 999px;
+background-color: #ffffff;
+font-size: 0.68rem;
+font-weight: 700;
+}
+
+.kentank-hero-availability-in-stock {
+color: #15803d;
+}
+
+.kentank-hero-availability-limited-stock {
+color: #b45309;
+}
+
+.kentank-hero-availability-out-of-stock {
+color: #dc2626;
+}
+
+/* =========================================================
+HERO CAROUSEL CONTROLS
+========================================================= */
+
+.kentank-carousel-controls {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 0.8rem;
+margin-top: 0.45rem;
+}
+
+.kentank-carousel-arrow {
+width: 30px;
+height: 30px;
+display: flex;
+align-items: center;
+justify-content: center;
+border: none;
+border-radius: 50%;
+background-color: rgba(255, 255, 255, 0.12);
+color: #ffffff;
+font-size: 1rem;
+cursor: pointer;
+transition:
+background-color 0.2s ease,
+transform 0.2s ease;
+}
+
+.kentank-carousel-arrow:hover {
+background-color: #22c55e;
+transform: translateY(-1px);
+}
+
+.kentank-carousel-dots {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 0.35rem;
+}
+
+.kentank-carousel-dot {
+width: 7px;
+height: 7px;
+padding: 0;
+border: none;
+border-radius: 50%;
+background-color: rgba(255, 255, 255, 0.35);
+cursor: pointer;
+}
+
+.kentank-carousel-dot.active {
+width: 18px;
+border-radius: 999px;
+background-color: #22c55e;
+}
+
+/* =========================================================
+HERO LOADING / EMPTY
+========================================================= */
+
+.kentank-hero-loading,
+.kentank-hero-no-product {
+min-height: 335px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+border-radius: 1rem;
+background-color: rgba(255, 255, 255, 0.08);
+color: #dbeafe;
+text-align: center;
+}
+
+.kentank-hero-loading p,
+.kentank-hero-no-product p {
+margin: 0.7rem 0 0;
+}
+
+.kentank-hero-no-product {
+padding: 1.5rem;
+}
+
+.kentank-hero-no-product h3 {
+color: #ffffff;
+margin-bottom: 0.35rem;
+}
+
+.kentank-hero-tank-icon {
+font-size: 2.5rem;
+margin-bottom: 0.5rem;
+}
+
+/* =========================================================
+LATEST TANKS SECTION
+========================================================= */
+
+.kentank-tanks-section {
+background-color: #f8fafc;
+padding: 3rem 0;
+}
+
+.kentank-section-heading {
+text-align: center;
+max-width: 700px;
+margin: 0 auto 1.75rem;
+}
+
+.kentank-section-label {
+display: inline-block;
+color: #16a34a;
+font-size: 0.75rem;
+font-weight: 700;
+letter-spacing: 0.08em;
+text-transform: uppercase;
+margin-bottom: 0.45rem;
+}
+
+.kentank-section-heading h2 {
+color: #071a2b;
+font-size: clamp(1.7rem, 3vw, 2.3rem);
+font-weight: 800;
+margin-bottom: 0.5rem;
+}
+
+.kentank-section-heading p {
+color: #64748b;
+font-size: 0.9rem;
+line-height: 1.6;
+margin-bottom: 0;
+}
+
+/* =========================================================
+TANK CARDS
+========================================================= */
+
+.kentank-tank-card {
+height: 100%;
+background-color: #ffffff;
+border: 1px solid #e2e8f0;
+border-radius: 0.85rem;
+overflow: hidden;
+box-shadow: 0 6px 20px rgba(15, 23, 42, 0.06);
+transition:
+transform 0.25s ease,
+box-shadow 0.25s ease;
+}
+
+.kentank-tank-card:hover {
+transform: translateY(-4px);
+box-shadow: 0 12px 28px rgba(15, 23, 42, 0.11);
+}
+
+.kentank-tank-image-wrapper {
+position: relative;
+height: 250px;
+overflow: hidden;
+background-color: #ffffff;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.kentank-tank-image {
+display: block;
+width: 100%;
+height: 100%;
+object-fit: contain;
+transition: transform 0.3s ease;
+}
+
+.kentank-tank-card:hover .kentank-tank-image {
+transform: scale(1.03);
+}
+
+/* =========================================================
+TANK AVAILABILITY
+========================================================= */
+
+.kentank-availability {
+position: absolute;
+top: 0.75rem;
+right: 0.75rem;
+padding: 0.35rem 0.6rem;
+border-radius: 999px;
+background-color: #ffffff;
+font-size: 0.68rem;
+font-weight: 700;
+box-shadow: 0 3px 10px rgba(15, 23, 42, 0.12);
+}
+
+.kentank-availability-in-stock {
+color: #15803d;
+}
+
+.kentank-availability-limited-stock {
+color: #b45309;
+}
+
+.kentank-availability-out-of-stock {
+color: #dc2626;
+}
+
+/* =========================================================
+TANK CARD BODY
+========================================================= */
+
+.kentank-tank-card-body {
+padding: 1rem;
+}
+
+.kentank-tank-card-body h3 {
+color: #071a2b;
+font-size: 1rem;
+font-weight: 800;
+margin-bottom: 0.3rem;
+}
+
+.kentank-tank-capacity {
+color: #16a34a;
+font-size: 0.78rem;
+font-weight: 700;
+margin-bottom: 0.55rem;
+}
+
+.kentank-tank-description {
+color: #64748b;
+font-size: 0.82rem;
+line-height: 1.5;
+margin-bottom: 0.9rem;
+}
+
+.kentank-tank-card-footer {
+border-top: 1px solid #e2e8f0;
+padding-top: 0.75rem;
+}
+
+.kentank-tank-card-footer strong {
+color: #071a2b;
+font-size: 0.95rem;
+font-weight: 800;
+}
+
+/* =========================================================
+RETAINED VIEW MORE + CONTACT BUTTONS
+========================================================= */
+
+.kentank-view-more-wrapper {
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 0.65rem;
+margin-top: 1.75rem;
+}
+
+.kentank-view-more-btn {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+min-width: 180px;
+min-height: 44px;
+padding: 0.65rem 1.25rem;
+border-radius: 0.5rem;
+background-color: #071a2b;
+color: #ffffff;
+font-size: 0.88rem;
+font-weight: 700;
+text-decoration: none;
+transition:
+background-color 0.2s ease,
+transform 0.2s ease,
+box-shadow 0.2s ease;
+}
+
+.kentank-view-more-btn:hover {
+background-color: #0b2a43;
+color: #ffffff;
+transform: translateY(-2px);
+box-shadow: 0 7px 18px rgba(7, 26, 43, 0.18);
+}
+
+.kentank-retained-contact-btn {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+min-width: 180px;
+min-height: 42px;
+padding: 0.6rem 1.2rem;
+border-radius: 0.5rem;
+border: 1px solid #16a34a;
+background-color: transparent;
+color: #16a34a;
+font-size: 0.88rem;
+font-weight: 700;
+text-decoration: none;
+transition:
+background-color 0.2s ease,
+color 0.2s ease,
+transform 0.2s ease;
+}
+
+.kentank-retained-contact-btn:hover {
+background-color: #16a34a;
+color: #ffffff;
+transform: translateY(-2px);
+}
+
+/* =========================================================
+EMPTY TANKS
+========================================================= */
+
+.kentank-empty-tanks {
+padding: 2.5rem 1rem;
+text-align: center;
+background-color: #ffffff;
+border: 1px solid #e2e8f0;
+border-radius: 0.85rem;
+}
+
+.kentank-empty-tanks h3 {
+color: #071a2b;
+font-size: 1.15rem;
+margin-bottom: 0.5rem;
+}
+
+.kentank-empty-tanks p {
+color: #64748b;
+margin-bottom: 0;
+}
+
+/* =========================================================
+WHY CHOOSE US
+========================================================= */
+
+.kentank-why-section {
+background-color: #ffffff;
+padding: 3.25rem 0;
+}
+
+.kentank-feature-card {
+height: 100%;
+padding: 1.5rem 1.25rem;
+text-align: center;
+background-color: #f8fafc;
+border: 1px solid #e2e8f0;
+border-radius: 0.85rem;
+transition:
+transform 0.25s ease,
+box-shadow 0.25s ease;
+}
+
+.kentank-feature-card:hover {
+transform: translateY(-4px);
+box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+}
+
+.kentank-feature-icon {
+width: 52px;
+height: 52px;
+margin: 0 auto 0.9rem;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 50%;
+background-color: rgba(34, 197, 94, 0.12);
+color: #16a34a;
+font-size: 1.4rem;
+}
+
+.kentank-feature-card h3 {
+color: #071a2b;
+font-size: 1rem;
+font-weight: 800;
+margin-bottom: 0.5rem;
+}
+
+.kentank-feature-card p {
+color: #64748b;
+font-size: 0.84rem;
+line-height: 1.55;
+margin-bottom: 0;
+}
+
+/* =========================================================
+FINAL CTA
+========================================================= */
+
+.kentank-home-cta {
+padding: 2.75rem 0;
+background:
+linear-gradient(
+135deg,
+#071a2b 0%,
+#0b2a43 55%,
+#0f5132 100%
+);
+}
+
+.kentank-cta-content {
+text-align: center;
+max-width: 700px;
+margin: 0 auto;
+}
+
+.kentank-cta-content h2 {
+color: #ffffff;
+font-size: clamp(1.6rem, 3vw, 2.2rem);
+font-weight: 800;
+margin-bottom: 0.55rem;
+}
+
+.kentank-cta-content p {
+color: #cbd5e1;
+font-size: 0.9rem;
+line-height: 1.6;
+margin-bottom: 1rem;
+}
+
+.kentank-btn-light {
+background-color: #ffffff;
+color: #071a2b;
+border: 1px solid #ffffff;
+}
+
+.kentank-btn-light:hover {
+background-color: #22c55e;
+border-color: #22c55e;
+color: #ffffff;
+}
+
+/* =========================================================
+RESPONSIVE - TABLET
+========================================================= */
+
+@media (max-width: 991.98px) {
+.kentank-hero {
+padding: 1rem 0 1.2rem;
+}
+
+.kentank-hero-row {
+min-height: 0;
+}
+
+.kentank-hero-content {
+text-align: left;
+}
+
+.kentank-hero-showcase {
+max-width: 650px;
+margin: 0.9rem auto 0;
+}
+
+.kentank-hero-product,
+.kentank-hero-loading,
+.kentank-hero-no-product {
+height: 310px;
+min-height: 310px;
+}
+
+.kentank-tank-image-wrapper {
+height: 250px;
+}
+}
+
+/* =========================================================
+RESPONSIVE - MOBILE
+Keep the same hero concept:
+Text -> Tank -> Controls
+========================================================= */
+
+@media (max-width: 767.98px) {
+.kentank-hero {
+padding: 0.85rem 0 1rem;
+}
+
+.kentank-hero-row {
+min-height: 0;
+}
+
+.kentank-hero-content {
+margin-bottom: 0;
+}
+
+.kentank-hero-badge {
+font-size: 0.65rem;
+margin-bottom: 0.35rem;
+letter-spacing: 0.055em;
+}
+
+.kentank-hero-title {
+font-size: 1.8rem;
+line-height: 1.05;
+margin-bottom: 0.5rem;
+}
+
+.kentank-hero-description {
+max-width: 100%;
+font-size: 0.82rem;
+line-height: 1.45;
+margin-bottom: 0.65rem;
+}
+
+.kentank-hero .kentank-btn-outline {
+min-width: 125px;
+min-height: 36px;
+padding: 0.4rem 0.85rem;
+font-size: 0.78rem;
+}
+
+.kentank-hero-showcase {
+width: 100%;
+max-width: 100%;
+margin: 0.75rem auto 0;
+}
+
+.kentank-hero-product,
+.kentank-hero-loading,
+.kentank-hero-no-product {
+width: 100%;
+height: 280px;
+min-height: 280px;
+border-radius: 0.8rem;
+}
+
+.kentank-hero-product-image {
+object-fit: contain;
+}
+
+.kentank-hero-product-overlay {
+padding: 0.8rem;
+}
+
+.kentank-hero-product-label {
+font-size: 0.6rem;
+}
+
+.kentank-hero-product-overlay h2 {
+font-size: 1.05rem;
+margin: 0.2rem 0 0.3rem;
+}
+
+.kentank-hero-product-details {
+gap: 0.55rem;
+font-size: 0.72rem;
+margin-bottom: 0.35rem;
+}
+
+.kentank-hero-availability {
+font-size: 0.6rem;
+padding: 0.25rem 0.5rem;
+}
+
+.kentank-carousel-controls {
+gap: 0.6rem;
+margin-top: 0.35rem;
+}
+
+.kentank-carousel-arrow {
+width: 28px;
+height: 28px;
+font-size: 0.9rem;
+}
+
+.kentank-carousel-dot {
+width: 6px;
+height: 6px;
+}
+
+.kentank-carousel-dot.active {
+width: 17px;
+}
+
+.kentank-tank-image-wrapper {
+height: 250px;
+}
+
+.kentank-tanks-section {
+padding: 2.25rem 0;
+}
+
+.kentank-why-section {
+padding: 2.5rem 0;
+}
+}
+
+/* =========================================================
+RESPONSIVE - SMALL PHONES
+========================================================= */
+
+@media (max-width: 575.98px) {
+.kentank-hero {
+padding: 0.7rem 0 0.85rem;
+}
+
+.kentank-hero-badge {
+font-size: 0.58rem;
+margin-bottom: 0.3rem;
+}
+
+.kentank-hero-title {
+font-size: 1.55rem;
+line-height: 1.05;
+margin-bottom: 0.4rem;
+}
+
+.kentank-hero-description {
+font-size: 0.76rem;
+line-height: 1.4;
+margin-bottom: 0.55rem;
+}
+
+.kentank-hero .kentank-btn-outline {
+min-width: 112px;
+min-height: 33px;
+padding: 0.35rem 0.7rem;
+font-size: 0.72rem;
+}
+
+.kentank-hero-showcase {
+margin-top: 0.6rem;
+}
+
+.kentank-hero-product,
+.kentank-hero-loading,
+.kentank-hero-no-product {
+height: 235px;
+min-height: 235px;
+border-radius: 0.7rem;
+}
+
+.kentank-hero-product-overlay {
+padding: 0.65rem;
+}
+
+.kentank-hero-product-label {
+font-size: 0.55rem;
+}
+
+.kentank-hero-product-overlay h2 {
+font-size: 0.95rem;
+margin: 0.15rem 0 0.25rem;
+}
+
+.kentank-hero-product-details {
+font-size: 0.65rem;
+gap: 0.45rem;
+margin-bottom: 0.25rem;
+}
+
+.kentank-hero-availability {
+font-size: 0.55rem;
+padding: 0.2rem 0.45rem;
+}
+
+.kentank-carousel-controls {
+margin-top: 0.3rem;
+gap: 0.5rem;
+}
+
+.kentank-carousel-arrow {
+width: 25px;
+height: 25px;
+font-size: 0.8rem;
+}
+
+.kentank-carousel-dot {
+width: 5px;
+height: 5px;
+}
+
+.kentank-carousel-dot.active {
+width: 15px;
+}
+
+.kentank-tank-image-wrapper {
+height: 250px;
+}
+
+.kentank-tanks-section {
+padding: 2rem 0;
+}
+
+.kentank-section-heading {
+margin-bottom: 1.25rem;
+}
+
+.kentank-section-heading h2 {
+font-size: 1.5rem;
+}
+
+.kentank-section-heading p {
+font-size: 0.8rem;
+}
+}
+
+/* =========================================================
+VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 390px) {
+.kentank-hero {
+padding: 0.6rem 0 0.75rem;
+}
+
+.kentank-hero-title {
+font-size: 1.4rem;
+}
+
+.kentank-hero-description {
+font-size: 0.72rem;
+}
+
+.kentank-hero-product,
+.kentank-hero-loading,
+.kentank-hero-no-product {
+height: 215px;
+min-height: 215px;
+}
+
+.kentank-hero-product-overlay {
+padding: 0.55rem;
+}
+
+.kentank-hero-product-overlay h2 {
+font-size: 0.88rem;
+}
+
+.kentank-hero-product-details {
+font-size: 0.6rem;
+}
+
+.kentank-tank-image-wrapper {
+height: 230px;
+}
+}
