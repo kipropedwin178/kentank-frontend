@@ -28,10 +28,31 @@ const getImageUrl = (imageUrl) => {
 };
 
 
+const getWhatsAppNumber = (phoneNumber) => {
+  if (!phoneNumber) {
+    return "";
+  }
+
+  let number = phoneNumber.replace(/\D/g, "");
+
+  if (number.startsWith("0")) {
+    number = `254${number.slice(1)}`;
+  }
+
+  if (!number.startsWith("254")) {
+    number = `254${number}`;
+  }
+
+  return number;
+};
+
+
 function HomePage() {
   const [tanks, setTanks] = useState([]);
   const [loadingTanks, setLoadingTanks] = useState(true);
   const [currentTankIndex, setCurrentTankIndex] = useState(0);
+
+  const [contact, setContact] = useState(null);
 
 
   useEffect(() => {
@@ -99,6 +120,25 @@ function HomePage() {
 
 
   useEffect(() => {
+    const fetchContact = async () => {
+      try {
+        const response = await api.get("/contact");
+
+        setContact(response.data);
+      } catch (error) {
+        console.error(
+          "Failed to load contact information:",
+          error,
+        );
+      }
+    };
+
+
+    fetchContact();
+  }, []);
+
+
+  useEffect(() => {
     if (tanks.length <= 1) {
       return;
     }
@@ -154,6 +194,31 @@ function HomePage() {
   const latestTanks = tanks;
 
 
+  const whatsappNumber =
+    getWhatsAppNumber(
+      contact?.whatsapp_number,
+    );
+
+
+  const callNumber =
+    contact?.call_number || "";
+
+
+  const whatsappMessage = encodeURIComponent(
+    "Hello Kentank Deliveries, I would like to enquire about your water tanks.",
+  );
+
+
+  const whatsappLink = whatsappNumber
+    ? `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`
+    : null;
+
+
+  const callLink = callNumber
+    ? `tel:${callNumber}`
+    : null;
+
+
   return (
     <div className="kentank-home">
 
@@ -178,10 +243,51 @@ function HomePage() {
 
               <h1 className="kentank-hero-title">
 
-                <span>
-                  Delivered to You
+                <span className="kentank-hero-title-decoration"></span>
+
+
+                <span className="kentank-hero-title-text">
+                  DELIVERED TO YOU
                 </span>
+
+
+                <span className="kentank-hero-title-decoration"></span>
+
               </h1>
+
+
+              <div className="kentank-hero-contact-actions">
+
+                {whatsappLink ? (
+                  <a
+                    href={whatsappLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="kentank-hero-contact-button kentank-hero-whatsapp-button"
+                  >
+                    WhatsApp Us
+                  </a>
+                ) : (
+                  <span className="kentank-hero-contact-button kentank-hero-contact-button-disabled">
+                    WhatsApp Us
+                  </span>
+                )}
+
+
+                {callLink ? (
+                  <a
+                    href={callLink}
+                    className="kentank-hero-contact-button kentank-hero-call-button"
+                  >
+                    Call Us
+                  </a>
+                ) : (
+                  <span className="kentank-hero-contact-button kentank-hero-contact-button-disabled">
+                    Call Us
+                  </span>
+                )}
+
+              </div>
 
 
               <p className="kentank-hero-description">
@@ -189,14 +295,6 @@ function HomePage() {
                 prices, with convenient delivery services
                 you can rely on.
               </p>
-
-
-              <Link
-                to="/contact"
-                className="kentank-btn kentank-btn-outline"
-              >
-                Contact Us
-              </Link>
 
             </div>
 
@@ -507,18 +605,19 @@ function HomePage() {
                           </p>
 
 
-                         <div className="kentank-tank-card-footer">
+                          <div className="kentank-tank-card-footer">
 
-  <strong>
-    KES{" "}
-    {Number(
-      tank.price,
-    ).toLocaleString()}
-  </strong>
+                            <strong>
+                              KES{" "}
+                              {Number(
+                                tank.price,
+                              ).toLocaleString()}
+                            </strong>
 
-</div>
+                          </div>
 
-<AddToCartButton tank={tank} />
+
+                          <AddToCartButton tank={tank} />
 
                         </div>
 
@@ -532,8 +631,6 @@ function HomePage() {
               </div>
 
 
-              {/* ONLY RETAINED VIEW MORE BUTTON */}
-
               <div className="kentank-view-more-wrapper">
 
                 <Link
@@ -543,8 +640,6 @@ function HomePage() {
                   View More Tanks
                 </Link>
 
-
-                {/* CONTACT US DIRECTLY BELOW VIEW MORE */}
 
                 <Link
                   to="/contact"
