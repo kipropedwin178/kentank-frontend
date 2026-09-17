@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 import api from '../../api/axios'
-import { useCart } from '../../context/CartContext'
+import AddToCartButton from '../../components/AddToCartButton'
 
 import './ProductsPage.css'
 
@@ -32,8 +32,6 @@ function ProductsPage() {
   const [tanks, setTanks] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState('')
-
-  const { addToCart } = useCart()
 
 
   useEffect(() => {
@@ -91,15 +89,6 @@ function ProductsPage() {
 
     fetchTanks()
   }, [])
-
-
-  const handleAddToCart = (event, tank) => {
-    event.preventDefault()
-    event.stopPropagation()
-
-    addToCart(tank)
-  }
-
 
   return (
     <div className="kentank-products-page">
@@ -290,7 +279,7 @@ function ProductsPage() {
                   return (
 
                     <div
-                      className="col-md-6 col-lg-4"
+                      className="col-6 col-lg-4"
                       key={tank.id}
                     >
 
@@ -417,19 +406,7 @@ function ProductsPage() {
                             ADD TO CART
                         ================================== */}
 
-                        <div className="kentank-product-cart-area">
-
-                          <button
-                            type="button"
-                            className="kentank-add-cart-btn"
-                            onClick={(event) =>
-                              handleAddToCart(event, tank)
-                            }
-                          >
-                            🛒 Add to Cart
-                          </button>
-
-                        </div>
+                        <AddToCartButton tank={tank} />
 
                       </article>
 

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import api from "../../api/axios";
+import AddToCartButton from "../../components/AddToCartButton";
 
 import "./HomePage.css";
 
@@ -430,7 +431,7 @@ function HomePage() {
                   return (
 
                     <div
-                      className="col-md-6 col-lg-3"
+                      className="col-6 col-lg-3"
                       key={tank.id}
                     >
 
@@ -506,16 +507,18 @@ function HomePage() {
                           </p>
 
 
-                          <div className="kentank-tank-card-footer">
+                         <div className="kentank-tank-card-footer">
 
-                            <strong>
-                              KES{" "}
-                              {Number(
-                                tank.price,
-                              ).toLocaleString()}
-                            </strong>
+  <strong>
+    KES{" "}
+    {Number(
+      tank.price,
+    ).toLocaleString()}
+  </strong>
 
-                          </div>
+</div>
+
+<AddToCartButton tank={tank} />
 
                         </div>
 
