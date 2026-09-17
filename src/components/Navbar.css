@@ -1,7 +1,7 @@
 .kentank-navbar {
   background-color: #071a2b;
-  padding-top: 0.9rem;
-  padding-bottom: 0.9rem;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
 }
 
 
@@ -33,14 +33,16 @@
 .kentank-logo {
   display: block;
 
-  width: 48px;
-  height: 48px;
+  width: 44px;
+  height: 44px;
 
   object-fit: cover;
 
   border-radius: 50%;
 
-  transition: opacity 0.2s ease, transform 0.2s ease;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
 }
 
 .kentank-navbar-brand:hover .kentank-logo {
@@ -81,30 +83,78 @@
   flex-wrap: nowrap;
 
   white-space: nowrap;
+
+  gap: 0.3rem;
 }
 
 
 /* =========================================================
-   NAVIGATION LINKS
+   COMPACT NAVIGATION CARDS
    ========================================================= */
 
-.kentank-navbar .nav-link {
-  color: #e2e8f0 !important;
+.kentank-navbar .nav-link.kentank-nav-card {
+  display: flex !important;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-height: 30px;
+
+  padding: 0.28rem 0.55rem;
+
+  margin: 0;
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+
+  border-radius: 0.4rem;
+
+  background-color: rgba(255, 255, 255, 0.035);
+
+  color: #dbe4ed !important;
+
+  font-size: 0.72rem;
 
   font-weight: 500;
 
-  margin-left: 0.75rem;
+  line-height: 1;
+
+  text-decoration: none;
 
   white-space: nowrap;
 
-  transition: color 0.2s ease;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
 }
 
-.kentank-navbar .nav-link:hover {
+
+/* =========================================================
+   HOVER
+   ========================================================= */
+
+.kentank-navbar .nav-link.kentank-nav-card:hover {
+  background-color: rgba(34, 197, 94, 0.1);
+
+  border-color: rgba(34, 197, 94, 0.3);
+
   color: #22c55e !important;
+
+  transform: translateY(-1px);
 }
 
-.kentank-navbar .nav-link.active {
+
+/* =========================================================
+   ACTIVE
+   ========================================================= */
+
+.kentank-navbar .nav-link.kentank-nav-card.active {
+  background-color: rgba(34, 197, 94, 0.12);
+
+  border-color: rgba(34, 197, 94, 0.35);
+
   color: #22c55e !important;
 }
 
@@ -120,9 +170,7 @@
 
   justify-content: center;
 
-  gap: 6px;
-
-  white-space: nowrap;
+  gap: 3px;
 }
 
 .kentank-cart-badge {
@@ -132,23 +180,24 @@
 
   justify-content: center;
 
-  min-width: 22px;
+  width: 17px;
+  height: 17px;
 
-  height: 22px;
+  margin-left: 1px;
 
-  padding: 0 6px;
-
-  border-radius: 50px;
+  border-radius: 50%;
 
   background-color: #198754;
 
   color: #ffffff;
 
-  font-size: 0.75rem;
+  font-size: 0.62rem;
 
   font-weight: 700;
 
   line-height: 1;
+
+  flex-shrink: 0;
 }
 
 
@@ -162,7 +211,7 @@
 
 
 /* =========================================================
-   MOBILE
+   MOBILE / TABLET
    ========================================================= */
 
 @media (max-width: 991.98px) {
@@ -174,8 +223,8 @@
   .kentank-navbar .container {
     max-width: 100%;
 
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
 
   .kentank-navbar .navbar-collapse {
@@ -200,15 +249,20 @@
     justify-content: flex-end;
 
     width: max-content;
+
+    gap: 0.25rem;
   }
 
-  .kentank-navbar .nav-link {
-    margin-left: 0.6rem;
+  .kentank-navbar .nav-link.kentank-nav-card {
+    min-height: 28px;
 
-    padding: 0.5rem 0;
+    padding: 0.25rem 0.45rem;
+
+    font-size: 0.68rem;
   }
 
 }
+
 
 /* =========================================================
    SMALL PHONES
@@ -217,52 +271,43 @@
 @media (max-width: 575.98px) {
 
   .kentank-navbar {
-    padding-top: 0.65rem;
-    padding-bottom: 0.65rem;
+    padding-top: 0.55rem;
+    padding-bottom: 0.55rem;
   }
 
   .kentank-logo {
-    width: 38px;
-    height: 38px;
+    width: 36px;
+    height: 36px;
   }
 
   .kentank-navbar .container {
-    padding-left: 0.6rem;
-    padding-right: 0.6rem;
+    padding-left: 0.45rem;
+    padding-right: 0.45rem;
   }
 
-  .kentank-navbar .nav-link {
-    margin-left: 0.4rem;
+  .kentank-navbar .navbar-nav {
+    gap: 0.2rem;
+  }
 
-    padding: 0.4rem 0;
+  .kentank-navbar .nav-link.kentank-nav-card {
+    min-height: 26px;
 
-    font-size: 0.78rem;
+    padding: 0.22rem 0.38rem;
+
+    border-radius: 0.35rem;
+
+    font-size: 0.64rem;
   }
 
   .kentank-cart-link {
-    gap: 3px;
+    gap: 2px;
   }
 
   .kentank-cart-badge {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+    width: 16px;
+    height: 16px;
 
-  width: 22px;
-  height: 22px;
-
-  margin-left: 6px;
-
-  border-radius: 50%;
-
-  background-color: #198754;
-  color: #ffffff;
-
-  font-size: 0.75rem;
-  font-weight: 700;
-  line-height: 1;
-
-  vertical-align: middle;
-}
+    font-size: 0.58rem;
+  }
 
 }

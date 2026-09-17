@@ -68,7 +68,7 @@ function Navbar() {
 
             <li className="nav-item">
               <Link
-                className="nav-link"
+                className="nav-link kentank-nav-card"
                 to="/"
                 onClick={closeNavbar}
               >
@@ -78,7 +78,7 @@ function Navbar() {
 
             <li className="nav-item">
               <Link
-                className="nav-link"
+                className="nav-link kentank-nav-card"
                 to="/products"
                 onClick={closeNavbar}
               >
@@ -88,7 +88,7 @@ function Navbar() {
 
             <li className="nav-item">
               <Link
-                className="nav-link"
+                className="nav-link kentank-nav-card"
                 to="/about"
                 onClick={closeNavbar}
               >
@@ -98,7 +98,7 @@ function Navbar() {
 
             <li className="nav-item">
               <Link
-                className="nav-link"
+                className="nav-link kentank-nav-card"
                 to="/contact"
                 onClick={closeNavbar}
               >
@@ -108,11 +108,11 @@ function Navbar() {
 
             <li className="nav-item">
               <Link
-                className="nav-link kentank-cart-link"
+                className="nav-link kentank-nav-card kentank-cart-link"
                 to="/cart"
                 onClick={closeNavbar}
               >
-                🛒 Cart
+                <span>🛒 Cart</span>
 
                 {totalItems > 0 && (
                   <span className="kentank-cart-badge">
