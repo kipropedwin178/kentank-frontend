@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 import api from '../../api/axios'
+import { useCart } from '../../context/CartContext'
 
 import './ProductsPage.css'
 
@@ -31,6 +32,8 @@ function ProductsPage() {
   const [tanks, setTanks] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState('')
+
+  const { addToCart } = useCart()
 
 
   useEffect(() => {
@@ -88,6 +91,14 @@ function ProductsPage() {
 
     fetchTanks()
   }, [])
+
+
+  const handleAddToCart = (event, tank) => {
+    event.preventDefault()
+    event.stopPropagation()
+
+    addToCart(tank)
+  }
 
 
   return (
@@ -269,16 +280,6 @@ function ProductsPage() {
 
                 {tanks.map((tank) => {
 
-                  /*
-                   * Accept both:
-                   *
-                   * Cloudinary URLs:
-                   * https://res.cloudinary.com/...
-                   *
-                   * Legacy local URLs:
-                   * /uploads/...
-                   */
-
                   const primaryImage =
                     tank.images?.find(
                       (image) =>
@@ -410,6 +411,25 @@ function ProductsPage() {
                           </div>
 
                         </Link>
+
+
+                        {/* ==================================
+                            ADD TO CART
+                        ================================== */}
+
+                        <div className="kentank-product-cart-area">
+
+                          <button
+                            type="button"
+                            className="kentank-add-cart-btn"
+                            onClick={(event) =>
+                              handleAddToCart(event, tank)
+                            }
+                          >
+                            🛒 Add to Cart
+                          </button>
+
+                        </div>
 
                       </article>
 

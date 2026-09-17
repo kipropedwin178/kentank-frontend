@@ -1,10 +1,15 @@
 import { useRef } from 'react'
 import { Link } from 'react-router-dom'
 
+import { useCart } from '../context/CartContext'
+
 import './Navbar.css'
+
 
 function Navbar() {
   const navbarCollapseRef = useRef(null)
+
+  const { totalItems } = useCart()
 
   const closeNavbar = () => {
     const collapseElement = navbarCollapseRef.current
@@ -98,6 +103,22 @@ function Navbar() {
                 onClick={closeNavbar}
               >
                 Contact Us
+              </Link>
+            </li>
+
+            <li className="nav-item">
+              <Link
+                className="nav-link kentank-cart-link"
+                to="/cart"
+                onClick={closeNavbar}
+              >
+                🛒 Cart
+
+                {totalItems > 0 && (
+                  <span className="kentank-cart-badge">
+                    {totalItems}
+                  </span>
+                )}
               </Link>
             </li>
 

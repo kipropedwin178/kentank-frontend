@@ -517,6 +517,49 @@ background-color: #4ade80;
 color: #052e16;
 transform: translateY(-2px);
 }
+/* ==========================================
+   ADD TO CART
+========================================== */
+
+.kentank-product-cart-area {
+  padding: 0 1.5rem 1.5rem;
+  background-color: #ffffff;
+}
+
+.kentank-add-cart-btn {
+  display: block;
+  width: 100%;
+  border: none;
+  border-radius: 0.6rem;
+  padding: 0.8rem 1rem;
+  background-color: #198754;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.2;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.kentank-add-cart-btn:hover {
+  background-color: #157347;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 14px rgba(21, 115, 71, 0.25);
+}
+
+.kentank-add-cart-btn:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.kentank-add-cart-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(25, 135, 84, 0.25);
+}
 
 /* ==========================================
 RESPONSIVE

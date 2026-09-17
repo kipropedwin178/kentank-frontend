@@ -7,9 +7,17 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 import './index.css'
 import App from './App.jsx'
 
+import { CartProvider } from './context/CartContext'
+
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App />
+
+    <CartProvider>
+
+      <App />
+
+    </CartProvider>
+
   </StrictMode>,
 )
